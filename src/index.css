@@ -15,13 +15,16 @@ html {
   /* For WebKit (Chrome, Safari, etc.) */
 }
 html ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
+  height: 6px;
 }
 html ::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-radius: 6px;
 }
 html ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--theme);
+  border-radius: 6px;
 }
 html ::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -85,8 +88,8 @@ body .nav_bar .mode {
 }
 body .body {
   width: 100%;
-  height: 100vh;
-  padding: 5rem;
+  height: 93.5vh;
+  padding: 2rem 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -94,7 +97,6 @@ body .body .body-body {
   width: 100%;
   height: 80vh;
   display: flex;
-  padding: 0 0rem;
 }
 body .body .left {
   width: 50%;
@@ -189,27 +191,79 @@ body .body .right {
   height: 100%;
   padding: 4rem 0rem;
 }
+body .body .right .slider {
+  width: 80%;
+  height: 80%;
+  background-color: #170034;
+  border-radius: 2rem;
+}
 body .body .right .slider .btn-container {
+  width: 100%;
   height: 8rem;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
-  flex: 1;
   white-space: nowrap;
   gap: 1rem;
 }
 body .body .right .slider .btn-container button {
+  font-family: monospace;
+  text-transform: capitalize;
   color: white;
   display: inline-block;
   height: 100%;
-  font-size: 2.6rem;
+  font-size: 2rem;
+  padding: 2rem;
   border: none;
   background-color: transparent;
 }
 body .body .right .slider .btn-container button:hover {
   cursor: pointer;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid black;
 }
 body .body .right .slider .pageContent-container {
   color: white;
+  width: 100%;
+  height: 80%;
+  padding: 2rem;
+}
+body .body .right .slider .pageContent-container .text-content {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+}
+body .body .footer {
+  width: 100%;
+  height: 10vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid var(--theme);
+}
+body .body .footer .left {
+  width: 50%;
+}
+body .body .footer .left ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+body .body .footer .left ul li {
+  font-size: 1.8rem;
+}
+body .body .footer .right {
+  width: 50%;
+  justify-content: end;
+}
+body .body .footer .right ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+body .body .footer .right ul li {
+  font-size: 1.8rem;
 }/*# sourceMappingURL=index.css.map */
