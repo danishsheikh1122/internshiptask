@@ -1,24 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer(obj) {
+  console.log(obj.obj[7].footerLeft);
+  // console.log(obj.obj[8]);
   return (
     <div className="footer">
       <div className="left">
         <ul>
-          <li>Trademark Policy</li>
-          <li>Privacy Policy</li>
-          <li>Code of Conduct</li>
-          <li>Security Policy</li>
+          {
+            obj.obj[7].footerLeft.map((item, index) => {
+              return (
+                <Link className="link" to={item.link} key={index}>
+                  {item.btnText}
+                </Link>
+              );
+            })
+            // console.log(obj.obj.data[1].navData)
+          }
         </ul>
       </div>
       <div className="right">
         <ul>
-          <li>Trademark Policy</li>
-          <li>Privacy Policy</li>
-          <li>Code of Conduct</li>
-          <li>Security Policy</li>
+          {
+            obj.obj[7].footerLeft.map((item, index) => {
+              return (
+                <Link className="link" to={item.link} key={index}>
+                  {item.btnText}
+                </Link>
+              );
+            })
+            // console.log(obj.obj.data[1].navData)
+          }
         </ul>
       </div>
+      
     </div>
   );
 }

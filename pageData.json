@@ -1,0 +1,46 @@
+{
+  "data": [
+    { "img": "url" },
+    {
+      "navData": [
+        { "btnText": "Document create", "link": "/" },
+        { "btnText": "text", "link": "/" },
+        { "btnText": "text", "link": "/" },
+        { "btnText": "text", "link": "/" }
+      ]
+    },
+    { "tagLine": "Turn Your Knowledge Into Income." },
+    { "belowTagLineData": "this is fldge consultancy pvtlda... dataa" },
+    { "buttonText": "Text Text" },
+    { "belowButtonText": "below btn text lorem1200..." },
+    {
+      "sliderData": [
+        { "btnName": "Button 1Name", "pageContent": "page 1 content" },
+        { "btnName": "Button 2Name", "pageContent": "page 2 content" },
+        { "btnName": "Button 3Name", "pageContent": "page 3 content" },
+        { "btnName": "Button 4Name", "pageContent": "page 4 content" },
+        { "btnName": "Button 5Name", "pageContent": "page 5 content" },
+        { "btnName": "Button 6Name", "pageContent": "page 6 content" },
+        { "btnName": "Button 7Name", "pageContent": "page 7 content" },
+        { "btnName": "Button 8Name", "pageContent": "page 8 content" }
+      ]
+    },
+    {
+      "footerLeft": [
+        { "btnText": "text", "link": "/" },
+        { "btnText": "texczasadsasdxczxczxt", "link": "/" },
+        { "btnText": "text", "link": "/" },
+        { "btnText": "text", "link": "/" }
+      ]
+    },
+    {
+      "footerRight": [
+        { "btnText": "textdsadasdadssaad", "link": "/" },
+        { "btnText": "tezxccxzcxzxczxcxt", "link": "/" },
+        { "btnText": "text", "link": "/" },
+        { "btnText": "text", "link": "/" }
+      ]
+    },
+    { "color": "color to set as theme" }
+  ]
+}

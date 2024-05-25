@@ -1,5 +1,7 @@
 :root {
-    --theme: #d900d8;
+    --theme: #cdcdcdaa;
+    --bgColor: #151515df;
+    --sliderTheme: #342545;
 }
 * {
     padding: 0;
@@ -9,7 +11,7 @@
 
 html {
     font-size: 8px;
-    font-family: poppins;
+    font-family: open sans;
     scroll-behavior: smooth;
     /* For WebKit (Chrome, Safari, etc.) */
     ::-webkit-scrollbar {
@@ -23,26 +25,30 @@ html {
     }
 
     ::-webkit-scrollbar-thumb {
-        background: var(--theme);
+        background: #555;
         border-radius: 6px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: #555555a6;
     }
 }
 body {
-    // width: 100%;
-    // height: 100%;
-    background-image: url("./assets/bg.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-color: black;
+        overflow: hidden; /* Disables scrolling */
+        min-height: 100vh;
+        background:
+            radial-gradient(circle, #223522, #2c4f2d, #202320, #000000, #000000, #000000, #000000, #000000),
+            url("./assets/bgsvg.png") no-repeat center;
+        background-size: cover; /* If you want to ensure the SVG covers the entire element */
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
     .nav_bar {
         height: 6rem;
         width: 100%;
-        // background-color: pink;
+        background-color: #1c1c1cc5;
         font-size: 2rem;
         padding: 1rem;
         display: flex;
@@ -63,22 +69,21 @@ body {
             ul {
                 width: 100%;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 align-items: center;
                 list-style-type: none;
-                li {
-                    width: 100%;
+                gap: 4rem;
+                .link {
+                    width: fit-content;
                     display: flex;
-                    justify-content: center;
+                    // justify-content: center;
                     align-items: center;
-                    a {
-                        text-decoration: none;
-                        color: white;
-                        font-size: 2rem;
-                        &:hover {
-                            color: rgb(13, 18, 36);
-                            cursor: pointer;
-                        }
+                    text-decoration: none;
+                    color: white;
+                    font-size: 2rem;
+                    &:hover {
+                        color: var(--theme);
+                        cursor: pointer;
                     }
                 }
             }
@@ -150,10 +155,10 @@ body {
                     height: 45%;
                     font-size: 5rem;
                     text-transform: capitalize;
-                    font-family: monospace;
-                    font-weight: 800;
+                    font-family: open sans;
+                    font-weight: 600;
                     span {
-                        color: var(--theme);
+                        color: #949393bb;
                     }
                 }
                 p {
@@ -183,7 +188,7 @@ body {
                     font-family: monospace;
                     font-weight: 600;
                     color: white;
-                    background: rgba(217, 0, 216, 0.15);
+                    background: var(--theme);
                     border-radius: 10px;
                     border: 1px solid var(--theme);
                 }
@@ -202,12 +207,14 @@ body {
             width: 50%;
             height: 100%;
             // background-color: indianred;
-            padding: 4rem 0rem;
+            padding: 4rem;
             .slider {
-                width: 80%;
+                width: 90%;
                 height: 80%;
-                background-color: #170034;
+                background-color: #342545;
+                border: 1px solid var(--theme);
                 border-radius: 2rem;
+
                 .btn-container {
                     width: 100%;
                     height: 8rem;
@@ -229,7 +236,7 @@ body {
 
                         &:hover {
                             cursor: pointer;
-                            border-bottom: 2px solid black;
+                            border-bottom: 2px solid var(--theme);
                         }
                     }
                 }
@@ -252,36 +259,63 @@ body {
             width: 100%;
             height: 10vh;
             color: #fff;
+            // background-color: #1c1c1cc5;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            border-top: 2px solid var(--theme);
-            
+            border-top: 1px solid var(--theme);
+            text-transform: capitalize;
+            font-weight: 200;
+
             .left {
-                width: 50%;
+                width: 40%;
                 ul {
                     display: flex;
-                    // justify-content: space-around;
+                    justify-content: flex-start;
                     align-items: center;
                     list-style: none;
-                    gap: 2rem;
 
-                    li {
-                        font-size: 1.8rem;
+                    .link {
+                        height: 3rem;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2rem;
+                        &:hover {
+                            color: var(--theme);
+                            cursor: pointer;
+                            // background: var(--sliderTheme);
+                            border-bottom: 1px solid var(--theme);
+                        }
                     }
                 }
             }
             .right {
-                width: 50%;
-                justify-content: end;
+                width: 40%;
+                justify-content: flex-end;
                 ul {
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
                     list-style: none;
-                    gap: 1rem;
-                    li {
-                        font-size: 1.8rem;
+                    .link {
+                        height: 3rem;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2rem;
+
+                        &:hover {
+                            color: var(--theme);
+                            cursor: pointer;
+                            // background: var(--sliderTheme);
+                            border-bottom: 1px solid var(--theme);
+                        }
                     }
                 }
             }
